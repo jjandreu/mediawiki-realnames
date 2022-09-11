@@ -393,7 +393,7 @@ class Realnames {
 				$m = [
 					'all' => $personal_urls['userpage']['text'],
 					'username' => $personal_urls['userpage']['text'],
-					'realname' => $GLOBALS['wgUser']->getRealname(),
+					'realname' => \RequestContext::getMain()->getUser(),
 					];
 				$personal_urls['userpage']['text'] = self::replace( $m );
 			}
